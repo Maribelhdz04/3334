@@ -14,10 +14,6 @@ struct SharedState {
     cv: Condvar,
 }
 
-/// A generic thread pool implemented with Arc + Mutex + Condvar.
-/// - No third-party crates
-/// - Dynamic number of workers
-/// - Graceful shutdown + join
 pub struct ThreadPool {
     state: Arc<SharedState>,
     workers: Vec<Worker>,
