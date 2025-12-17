@@ -213,7 +213,7 @@ fn print_report(results: &[FileAnalysis]) {
             }
         }
 
-        // show top 10 chars by frequency (nice for sanity)
+        // show top 10 chars by frequency 
         let mut freqs: Vec<(char, usize)> = r.stats.char_frequencies.iter().map(|(c, n)| (*c, *n)).collect();
         freqs.sort_by(|a, b| b.1.cmp(&a.1));
         let top: Vec<String> = freqs.into_iter().take(10).map(|(c, n)| format!("{:?}:{n}", c)).collect();
