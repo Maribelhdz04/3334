@@ -191,7 +191,7 @@ pub fn process_files_parallel(
                 let mut st = progress_state.lock().unwrap();
                 st.cancelled = true;
             }
-            // Any files we didn't even enqueue should be marked skipped so progress can finish.
+            // Any files that didn't even enqueue should be marked skipped so progress can finish.
             for rem in iter {
                 let _ = tx.send(ProgressEvent::Skipped {
                     path: rem.display().to_string(),
