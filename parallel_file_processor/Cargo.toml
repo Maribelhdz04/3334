@@ -1,0 +1,7 @@
+[package]
+name = "parallel_file_processor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# No third-party dependencies allowed per project requirements.
